@@ -1,9 +1,40 @@
 @import (reference) './variables.less';
 
-html {
-  color: @color-text;
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat"),
+  url("../assets/montserrat-medium.woff2") format("woff2"),
+  url("../assets/montserrat-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
 
-  font: 16px Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: local("Montserrat"),
+  url("../assets/montserrat-bold.woff2") format("woff2"),
+  url("../assets/montserrat-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  color: @white;
+  background-color: @dark;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-width: 320px;
 }
 
 h1,
@@ -21,8 +52,97 @@ button {
   padding: 0;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 
   color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  min-width: 288px;
+  padding: 56px 16px 80px;
+  text-align: center;
+}
+
+.no-scroll {
+  position: fixed;
+  width:100%;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 2px;
+    background-color: @green;
+    background-image: @green-grad;
+  }
+}
+
+.title--h3 {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 31px;
+  &::after {
+    bottom: -3px;
+    left: 0;
+    margin-left: 0;
+  }
+}
+
+.button {
+  display: inline-block;
+  min-width: 140px;
+
+  padding: 8px 20px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 700;
+
+  color: inherit;
+  border-radius: 20px;
+  background-color: @green;
+  background-image: @green-grad;
+
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+
+  cursor: pointer;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="radio"].visually-hidden,
+input[type="checkbox"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

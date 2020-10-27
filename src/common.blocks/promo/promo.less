@@ -1,0 +1,36 @@
+@import (reference) '../../less/variables.less';
+
+.promo {
+  height: 100vh;
+  background-image: @promo__bg, url('promo__bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo__tagline {
+  max-width: 948px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 16px;
+  background-image: @promo__tagline;
+  margin: auto 0;
+}
+
+.promo__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  background-image: @green-grad;
+}
+
+.promo__button-pic {
+  width: 17px;
+  height: 23px;
+}
