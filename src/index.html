@@ -4,9 +4,226 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hello World</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>ПензаПромСтекло</title>
 </head>
 <body>
-  <h1>Heading</h1>
+  <header class="header">
+    <div class="header__top">
+      <a class="header__logo-link" href="/">
+        <svg class="header__logo-image">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
+      <button class="header__menu-button" type="button" name="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+    </div>
+    <div class="header__dropdown">
+      <nav class="header__navigation">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <button class="header__submenu-button" type="button" name="button">Услуги</button>
+            <ul class="header__submenu">
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="#">Резка стекла</a>
+              </li>
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="#">Обработка кромки стекла</a>
+              </li>
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="#">Сверление отверстий в стекле</a>
+              </li>
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="#">Художественные витражи</a>
+              </li>
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="#">Пескоструйная обработка кромки стекла</a>
+              </li>
+              <li class="header__submenu-item">
+                <a class="header__submenu-link" href="#">Молирование стекла</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">О нас</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Новости</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Полезная информация</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button  class="header__button button" type="button" name="button">Заказать звонок</button>
+    </div>
+  </header>
+  <main>
+    <h1 class="visually-hidden">ПензаПромСтекло</h1>
+
+    <div class="promo">
+      <p class="promo__tagline">
+        Изготовление изделий из&nbsp;стекла и&nbsp;зеркал
+      </p>
+      <a class="promo__button" href="#advantages">
+        <svg class="promo__button-pic">
+          <use xlink:href="#scroll-down"></use>
+        </svg>
+        <span class="visually-hidden">Узнать больше</span>
+      </a>
+    </div>
+
+    <section class="advantages" id="advantages">
+      <div class="advantages__wrapper container">
+        <h2 class="advantages__title title">Чем мы лучше?</h2>
+        <p class="advantages__text">Среди наших главных преимуществ  можно выделить следующие:</p>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <svg class="advantages__icon">
+              <use xlink:href="#advantages__purse"></use>
+            </svg>
+            <p class="advantages__description">Фиксированная стоимость работ</p>
+          </li>
+          <li class="advantages__item">
+            <svg class="advantages__icon">
+              <use xlink:href="#advantages__calendar"></use>
+            </svg>
+            <p class="advantages__description">Гарантируем работу в&nbsp;сроки</p>
+          </li>
+          <li class="advantages__item">
+            <svg class="advantages__icon">
+              <use xlink:href="#advantages__tools"></use>
+            </svg>
+            <p class="advantages__description">Только профессиональное оборудование</p>
+          </li>
+        </ul>
+        <button class="advantages__button button" type="button" name="button">Оставить заявку</button>
+      </div>
+    </section>
+
+    <section class="modal">
+      <h2 class="modal__title">Обратная связь</h2>
+      <form class="modal__form" action="index.html" method="post">
+        <label for="modal-name">Ваше имя</label>
+        <input type="text" name="" placeholder="Ваше имя" id="modal-name">
+        <label for="modal-phone">Ваш телефон</label>
+        <input type="tel" name="" placeholder="+7 ( ___ ) ___ -__-__" id="modal-phone">
+        <label for="modal-message">Сообщение</label>
+        <textarea name="name" rows="8" cols="80" id="modal-message"></textarea>
+        <p class="modal__alert">Нажимая кнопку, вы даете согласие на обработку
+          <a href="#">персональных данных</a>
+        </p>
+        <button class="modal__button button" type="submit" name="button">Отправить</button>
+      </form>
+      <button class="modal__button modal__button--close" type="button" name="button">Закрыть</button>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2 class="services__title title">Чем мы занимаемся?</h2>
+        <ul class="services__list">
+          <li class="services__item">
+            <img src="./common.blocks/services/services__cutting.jpg" alt="Резка стекла">
+            <a href="#" class="services__description">Резка<br>стекла</a>
+          </li>
+          <li class="services__item">
+            <img src="./common.blocks/services/services__drill.jpg" alt="Сверление отверстий">
+            <a href="#" class="services__description">Сверление<br>отверстий</a>
+          </li>
+          <li class="services__item">
+            <img src="./common.blocks/services/services__processing.jpg" alt="Обработка кромки">
+            <a href="#" class="services__description">Обработка кромки<br>стекла</a>
+          </li>
+          <li class="services__item">
+            <img src="./common.blocks/services/services__sandblasting.jpg" alt="Пескоструйная обработка">
+            <a href="#" class="services__description">Пескоструйная<br>обработка</a>
+          </li>
+        </ul>
+        <a class="services__link" href="#">Все услуги</a>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2 class="about__title title">О нас</h2>
+        <p class="about__text">Компания «ПензаПромСтекло», образованная несколько лет назад, является молодой, активно развивающейся и расширяющейся компанией, которая уже успела себя зарекомендовать как надёжный партнёр и производитель качественной продукции.</p>
+        <a class="about__link button" href="#">Подробнее</a>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <a class="footer__logo-link" href="/">
+      <svg class="footer__logo-image">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </a>
+    <div class="footer__copyright">
+      <p class="footer__copyright-text">© 2019 ПензаПромСтекло.</p>
+      <a class="footer__copyright-link" href="#">Политика конфиденциальности.</a>
+    </div>
+    <div class="footer__info">
+      <nav  class="footer__navigation">
+        <div class="footer__site-nav">
+          <h3 class="title title--h3">Информация</h3>
+          <ul>
+            <li>
+              <a class="footer__nav-link" href="#">О нас</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#">Новости</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#">Полезная информация</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__services-nav">
+          <h3 class="title title--h3">Услуги</h3>
+          <ul>
+            <li>
+              <a class="footer__nav-link" href="#">Резка стекла</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#">Обработка кромки стекла</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#">Сверление отверстий</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#">Художественные витражи</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#">Пескоструйная обработка</a>
+            </li>
+            <li>
+              <a class="footer__nav-link" href="#">Моллирование стекла</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="footer__contacts">
+        <h3 class="title title--h3">Контакты</h3>
+        <p>Адрес:
+          <br>г. Пенза, ул. Баумана, 30
+        </p>
+        <p>Телефон:
+          <br><a href="tel:88412223217">8 (8412) 22-32-17</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer__develop">
+      <p>Разработка сайта -
+        <a href="https://onlinebees.ru/">onlinebees.ru</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
