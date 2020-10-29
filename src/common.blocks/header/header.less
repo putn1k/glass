@@ -2,10 +2,10 @@
 
 .header {
   background-color: @darkblue;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  overflow-x: hidden;
 }
 
 .header__top {
@@ -54,6 +54,7 @@
 }
 
 .header__dropdown--opened {
+  position: relative;
   right: 0;
 }
 

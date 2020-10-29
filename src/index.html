@@ -101,25 +101,34 @@
             <p class="advantages__description">Только профессиональное оборудование</p>
           </li>
         </ul>
-        <button class="advantages__button button" type="button" name="button">Оставить заявку</button>
+        <button class="advantages__button button modal__open" type="button" name="button">Оставить заявку</button>
       </div>
     </section>
 
     <section class="modal">
-      <h2 class="modal__title">Обратная связь</h2>
-      <form class="modal__form" action="index.html" method="post">
-        <label for="modal-name">Ваше имя</label>
-        <input type="text" name="" placeholder="Ваше имя" id="modal-name">
-        <label for="modal-phone">Ваш телефон</label>
-        <input type="tel" name="" placeholder="+7 ( ___ ) ___ -__-__" id="modal-phone">
-        <label for="modal-message">Сообщение</label>
-        <textarea name="name" rows="8" cols="80" id="modal-message"></textarea>
-        <p class="modal__alert">Нажимая кнопку, вы даете согласие на обработку
-          <a href="#">персональных данных</a>
-        </p>
-        <button class="modal__button button" type="submit" name="button">Отправить</button>
-      </form>
-      <button class="modal__button modal__button--close" type="button" name="button">Закрыть</button>
+      <div class="modal__window">
+        <h2 class="modal__title title">Обратная связь</h2>
+        <form class="modal__form" action="index.html" method="post">
+          <label class="modal__label" for="modal-name">Ваше имя</label>
+          <input class="modal__input" type="text" name="Имя" placeholder="Ваше имя" id="modal-name">
+          <div class="modal__help"></div>
+          <label class="modal__label" for="modal-phone">Ваш телефон</label>
+          <input class="modal__input" type="tel" name="Телефон" placeholder="+7 ( ___ ) ___ -__-__" id="modal-phone">
+          <div class="modal__help"></div>
+          <label class="modal__label" for="modal-message">Сообщение</label>
+          <textarea class="modal__input modal__input--textarea" name="name" rows="5" id="modal-message"></textarea>
+          <p class="modal__alert">Нажимая кнопку, вы даете согласие на обработку
+            <a href="#">персональных данных</a>
+          </p>
+          <button class="modal__button button" type="submit" name="button">Отправить</button>
+        </form>
+        <button class="modal__close" type="button" name="button">
+          <svg width="16" height="16">
+            <use xlink:href="#cross"></use>
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
     </section>
 
     <section class="services">
