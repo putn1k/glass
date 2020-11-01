@@ -10,14 +10,17 @@
   flex-direction: column;
 }
 
-.promo__tagline {
+.promo__tagline-wrapper {
   max-width: 948px;
+  background-image: @promo__tagline;
+  margin: auto 0;
+}
+
+.promo__tagline {
+  padding: 16px;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  padding: 16px;
-  background-image: @promo__tagline;
-  margin: auto 0;
 }
 
 .promo__button {
@@ -33,4 +36,35 @@
 .promo__button-pic {
   width: 17px;
   height: 23px;
+}
+
+@media (min-width: @desktop) {
+  .promo {
+    background-image: @promo__bg, url('promo__bg--desktop.jpg');
+    background-size: 50%, cover;
+    background-position: left, center;
+  }
+
+  .promo__tagline-wrapper {
+    max-width: 50%;
+    display: flex;
+  }
+
+  .promo__tagline {
+    max-width: 620px;
+    margin-right: 80px;
+    margin-left: auto;
+    padding: 24px 0;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .promo__button {
+    width: 92px;
+    height: 92px;
+  }
+  .promo__button-pic {
+    width: 33px;
+    height: 45px;
+  }
 }

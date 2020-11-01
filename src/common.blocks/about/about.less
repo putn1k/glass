@@ -1,7 +1,43 @@
+@import (reference) '../../less/variables.less';
+
 .about__title {
   margin-bottom: 32px;
 }
 
 .about__text {
   margin-bottom: 40px;
+}
+
+.about__decoration {
+  display: none;
+}
+
+@media (min-width: @desktop) {
+  .about {
+    position: relative;
+  }
+
+  .about__text {
+    max-width: 39%;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .about__decoration {
+    display: block;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('about__decor-text.png'), @about__bg, url('about__facility.jpg');
+    background-position: left 64px center,center, center;
+    background-repeat: no-repeat;
+    background-size: auto, cover, cover;
+  }
+
+  .about__link {
+    margin-bottom: 62px;
+  }
+
 }

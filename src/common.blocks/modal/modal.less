@@ -14,12 +14,17 @@
   width: calc(100% - 32px);
   height: 100vh;
   min-height: 600px;
-  background-color: @darkblue;
+  background-color: @dark;
   z-index: 1010;
   transition: right .3s cubic-bezier(.4,0,.2,1);
 }
-.showed {
+
+.modal--showed {
   right: 0;
+}
+
+.modal__wrapper {
+  position: relative;
 }
 
 .modal__title {
@@ -30,7 +35,7 @@
 .modal__close {
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: -8px;
   height: 16px;
   background-color: transparent;
   border: none;
@@ -96,4 +101,22 @@
   font-size: 12px;
   line-height: 18px;
   margin-bottom: 32px;
+}
+
+@media (min-width: @desktop) {
+  .modal__wrapper {
+    max-width: 744px;
+    margin: 0 auto;
+
+  }
+  .modal__title {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: left;
+  }
+
+  .modal__button {
+    width: 150px;
+    padding: 8px 25px;
+  }
 }

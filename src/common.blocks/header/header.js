@@ -4,7 +4,7 @@ $('.header__menu-button').click(function(){ // eslint-disable-line
   $('body').toggleClass('no-scroll');
 });
 
-$('.header__submenu-button').click(function(){ // eslint-disable-line
-  $('.header__submenu-button').toggleClass('header__submenu-button--closed');
-  $('.header__submenu').toggle(300);
-});
+// $('.header__menu-link--submenu').click(function(){ // eslint-disable-line
+//   $('.header__menu-link--submenu').toggleClass('header__menu-link--closed');
+//   $('.header__submenu').toggle(300);
+// });

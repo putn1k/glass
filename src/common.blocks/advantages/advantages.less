@@ -11,9 +11,17 @@
 .advantages__icon {
   height: 72px;
 }
-
-.advantages__item:not(&:first-child) {
+.advantages__item {
+  max-width: 336px;
+  margin: 0 auto;
   margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.advantages__item:first-child {
+  margin-top: 0;
 }
 
 .advantages__description {
@@ -21,4 +29,42 @@
   line-height: 26px;
   font-weight: 700;
   margin-top: 24px;
+  text-align: center;
+  padding: 0 30px;
+}
+
+@media (min-width: @desktop) {
+
+  .advantages__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 68px;
+  }
+  .advantages__title {
+    max-width: 350px;
+    margin-bottom: 40px;
+  }
+  .advantages__content {
+    display: flex;
+  }
+
+  .advantages__list {
+    display: flex;
+    max-width: 1056px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: auto;
+    padding: 0;
+  }
+  .advantages__item {
+    margin-top: 0;
+  }
+
+  .advantages__text {
+    max-width: 336px;
+  }
+  .advantages__button {
+    width: 180px;
+    margin-top: -62px;
+  }
 }
